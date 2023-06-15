@@ -8,3 +8,14 @@ on:
   schedule:
     - cron: 15 6 * * SUN
   workflow_dispatch:
+
+jobs:
+  Build:
+    runs-on:
+      labels: ubuntu-latest
+    steps:
+    - run: echo event was ${{ github.event }} on branch ${{ github.ref }} repo ${{ github.repository }}
+    - uses: actions/checkout@main
+    - name: list files
+      run: ls -al
+    
