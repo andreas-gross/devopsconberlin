@@ -1,5 +1,6 @@
 # GitHub Actions Fundamentals
 
+[![Github Actions Demo](https://github.com/andreas-gross/devopsconberlin/actions/workflows/github-actions-demo.yml/badge.svg?branch=main)](https://github.com/andreas-gross/devopsconberlin/actions/workflows/github-actions-demo.yml)
 
 Repo for the `GitHub Actions Fundamentals` training.
 
