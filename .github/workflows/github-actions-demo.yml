@@ -18,7 +18,7 @@ on:
 jobs:
   Build:
     runs-on:
-      labels: ubuntu-latest
+      labels: ubuntu-20.04
     steps:
     - run: echo "event was ${{ github.event_name }} on branch ${{ github.ref }} repo ${{ github.repository }}"
     - uses: actions/checkout@main
@@ -26,6 +26,7 @@ jobs:
       run: |
         echo "repo ${{ github.repository }} content is: "
         tree
+        uptime
 
   Test:
     runs-on: ubuntu-latest
