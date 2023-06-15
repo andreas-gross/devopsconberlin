@@ -2,7 +2,7 @@ name: Github Actions Demo
 on:
   push:
     branches: main
-    paths-ignore: .github/*
+    paths-ignore: .github/**
   pull_request:
     branches: main
   schedule:
@@ -14,8 +14,10 @@ jobs:
     runs-on:
       labels: ubuntu-latest
     steps:
-    - run: echo event was ${{ github.event }} on branch ${{ github.ref }} repo ${{ github.repository }}
+    - run: echo "event was ${{ github.event_name }} on branch ${{ github.ref }} repo ${{ github.repository }}"
     - uses: actions/checkout@main
     - name: list files
-      run: ls -al
-    
+      run: |
+        echo "repo ${{ github.repository }} content is: "
+        tree
+      
