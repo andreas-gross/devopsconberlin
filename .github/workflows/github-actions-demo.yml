@@ -20,4 +20,5 @@ jobs:
       run: |
         echo "repo ${{ github.repository }} content is: "
         tree
-      
+    - run: echo "gh object  ${{ github.toJson() }}"
+    
